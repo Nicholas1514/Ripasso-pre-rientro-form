@@ -21,5 +21,12 @@ namespace Ripasso_pre_rientro_form
 
             return ncampi;
         }
+        public void Aggiuntacoda(string contenuto)
+        {
+            var oStream = new FileStream(nfile, FileMode.Append, FileAccess.Write, FileShare.Read);
+            StreamWriter sw = new StreamWriter(oStream);
+            sw.WriteLine(contenuto);
+            sw.Close();
+        }
     }
 }

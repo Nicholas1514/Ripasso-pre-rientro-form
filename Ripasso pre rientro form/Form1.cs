@@ -32,5 +32,11 @@ namespace Ripasso_pre_rientro_form
             int contacampi = f.Contacampi();
             MessageBox.Show("Il numero dei campi è: " + contacampi);
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            f.Aggiuntacoda(textBox1.Text);
+            MessageBox.Show("Elemento aggiunto al file");
+        }
     }
 }
