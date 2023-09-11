@@ -124,5 +124,18 @@ namespace Ripasso_pre_rientro_form
                 MessageBox.Show("Elemento non presente nel file");
             }
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            bool canc = f.CancellazioneLogica(textBox5.Text);
+            if(canc == true)
+            {
+                MessageBox.Show("Elemento cancellato");
+            }
+            else
+            {
+                MessageBox.Show("Elemento non presente nel file");
+            }
+        }
     }
 }

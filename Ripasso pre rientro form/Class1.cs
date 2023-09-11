@@ -98,12 +98,12 @@ namespace Ripasso_pre_rientro_form
                 {
                     if (riga == 0)
                     {
-                        arr[riga] = s + ";miovalore";
+                        arr[riga] = s + ";miovalore;canc logica";
                     }
                     else
                     {
                         string x = (r.Next(10, 21)).ToString();
-                        arr[riga] = s + ";" + x;
+                        arr[riga] = s + ";" + x + ";" + "0";
                     }
                     riga++;
                    
@@ -210,7 +210,40 @@ namespace Ripasso_pre_rientro_form
             return trova;
         }
 
-       
+        public bool CancellazioneLogica(string cancellato)
+        {
+           
+            bool canc = false;
+            string[] linee = File.ReadAllLines(nfile);
+            using (StreamWriter sw = new StreamWriter(nfile))
+            {
+                for (int i = 0; i < linee.Length; i++)
+                {
+                    string[] campi = linee[i].Split(';');
+                   
+                        if (cancellato == campi[i])
+                        {
+                            campi[ncampi - 1] = "1";
+                            linee[i] = String.Join(";", campi);
+                            canc = true;
+
+                            break;
+                        }
+                    
+                    
+
+                }
+                for (int i = 0; i < linee.Length; i++)
+                    sw.WriteLine(linee[i]);
+
+            }
+
+            return canc;
+
+        }
+
+
+
 
 
 
