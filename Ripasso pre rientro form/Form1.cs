@@ -67,5 +67,11 @@ namespace Ripasso_pre_rientro_form
             f.Aggiuntacampo(nfile);
             MessageBox.Show("E' stato aggiunto il campo");
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int lung = f.Lunghmax();
+            MessageBox.Show(lung.ToString());
+        }
     }
 }

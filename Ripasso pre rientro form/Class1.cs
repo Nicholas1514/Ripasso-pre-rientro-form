@@ -119,6 +119,31 @@ namespace Ripasso_pre_rientro_form
             }
         }
 
+        public int Lunghmax()
+        {
+            int ncampi = Contacampi();
+            int lungmax = 0;
+            
+            using(StreamReader sr = new StreamReader(nfile))
+            {
+                string s;
+                while((s = sr.ReadLine()) != null)
+                {
+                    string[] dati = s.Split(';');
+                    for(int i = 0; i < ncampi; i++)
+                    {
+                        if (dati[i].Length > lungmax)
+                        {
+                            lungmax = dati[i].Length;
+                        }
+                    }
+                   
+                    
+                }
+            }
+            return lungmax;
+        }
+
 
     }
     }
