@@ -5,10 +5,12 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Ripasso_pre_rientro_form.Funzioni;
 
 namespace Ripasso_pre_rientro_form
 {
@@ -72,6 +74,55 @@ namespace Ripasso_pre_rientro_form
         {
             int lung = f.Lunghmax();
             MessageBox.Show(lung.ToString());
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            f.Spazi();
+            MessageBox.Show("Ogni record ha la stessa dimensione");
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            int ncampi = f.Contacampi();
+            dataGridView1.Rows.Clear();
+            string[] linee = File.ReadAllLines(nfile);
+            string[] campi = linee[0].Split(';');
+            dataGridView1.Rows.Add(campi[0], campi[1], campi[2]);
+            for (int i = 0; i < linee.Length; i++)
+            {
+
+                campi = linee[i].Split(';');
+
+
+                //condizione per gli elementi che vengono aggiunti in coda
+                if (campi[1] == "")
+                {
+                    dataGridView1.Rows.Add(campi[0]);
+                }
+
+                if (campi[ncampi - 1] == "0")
+                {
+                    dataGridView1.Rows.Add(campi[0], campi[1], campi[2]);
+                }
+
+
+
+
+            }
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            bool trova = f.Modifica(textBox3.Text, textBox4.Text);
+            if(trova == true)
+            {
+                MessageBox.Show("Elemento modificato");
+            }
+            else
+            {
+                MessageBox.Show("Elemento non presente nel file");
+            }
         }
     }
 }

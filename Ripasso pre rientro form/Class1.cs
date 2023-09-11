@@ -5,6 +5,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace Ripasso_pre_rientro_form
 {
@@ -144,7 +146,74 @@ namespace Ripasso_pre_rientro_form
             return lungmax;
         }
 
+        public void Spazi()
+        {
+            string[] linee = File.ReadAllLines(nfile);
+            using (StreamWriter sw = new StreamWriter(nfile))
+            {
+                for (int i = 0; i < linee.Length; i++)
+                {
+                    linee[i] = linee[i].PadRight(300);
+                    sw.WriteLine(linee[i]);
+
+                }
+
+
+            }
+
+        }
+
+        public bool Modifica(string damodificare, string nuovoele)
+        {
+            bool trova = false;
+            string[] linee = File.ReadAllLines(nfile);
+
+            using (StreamWriter sw = new StreamWriter(nfile))
+            {
+                int i = 1;
+                sw.WriteLine(linee[0]);
+                for (; i < linee.Length; i++)
+                {
+                    string[] campi = linee[i].Split(';');
+
+                    if (campi[0] == damodificare)
+                    {
+                        trova = true;
+                        campi[0] = nuovoele;
+                        linee[i] = String.Join(";", campi);
+                        sw.WriteLine(linee[i]);
+                        break;
+                    }
+                    else
+                    if (campi[1] == damodificare)
+                    {
+                        trova = true;
+                        campi[1] = nuovoele;
+                        linee[i] = String.Join(";", campi);
+                        sw.WriteLine(linee[i]);
+                        break;
+                    }
+                    else
+                    if (campi[4] == damodificare)
+                    {
+                        trova = true;
+                        campi[4] = nuovoele;
+                        linee[i] = String.Join(";", campi);
+                        sw.WriteLine(linee[i]);
+                        break;
+                    }
+                }
+                i++;
+                for (; i < linee.Length; i++)
+                    sw.WriteLine(linee[i]);
+            }
+            return trova;
+        }
+
+       
+
+
 
     }
-    }
+}
 
