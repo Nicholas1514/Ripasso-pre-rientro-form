@@ -139,16 +139,7 @@ namespace Ripasso_pre_rientro_form
 
         private void button9_Click(object sender, EventArgs e)
         {
-            /*bool trova = f.Modifica(textBox3.Text, textBox4.Text);
-            if(trova == true)
-            {
-                MessageBox.Show("Elemento modificato");
-            }
-            else
-            {
-                MessageBox.Show("Elemento non presente nel file");
-            }
-            */
+      
             f.Modifica(textBox4.Text, textBox1.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text, nfile, sep, recordLenght);
             MessageBox.Show("Record modificato");
         }
