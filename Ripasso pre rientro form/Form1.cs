@@ -14,16 +14,35 @@ using static Ripasso_pre_rientro_form.Funzioni;
 
 namespace Ripasso_pre_rientro_form
 {
+    
     public partial class Form1 : Form
     {
-      
+        public struct Campi
+        {
+            public string comune;
+            public string provincia;
+            public string regione;
+            public string nome;
+            public int anno;
+            public string data;
+            public float identificatore;
+            public string longitudine;
+            public string latitudine;
+        }
+
+        Campi c;
+
         Funzioni f;
         public string nfile;
+        public int recordLenght;
+        public string sep;
         public Form1()
         {
             InitializeComponent();
             f = new Funzioni();
             nfile = @"Zappa.csv";
+            sep = ";";
+            recordLenght = 124;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -39,14 +58,20 @@ namespace Ripasso_pre_rientro_form
 
         private void button2_Click(object sender, EventArgs e)
         {
-            f.Aggiuntacoda(textBox1.Text);
-            MessageBox.Show("Elemento aggiunto al file");
+            
+           
+           
+           
+            f.c =f.sp(textBox1.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text);
+            f.AggProd(f.Record(f.c, recordLenght), nfile);
+            MessageBox.Show("I campi sono stati aggiunti al file");
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Funzioni.Campi c = f.sep();
+            /*Funzioni.Campi c = f.sp();
             MessageBox.Show(c.comune + " " + c.provincia + " " + c.anno);
+            */
         }
 
        
@@ -114,7 +139,7 @@ namespace Ripasso_pre_rientro_form
 
         private void button9_Click(object sender, EventArgs e)
         {
-            bool trova = f.Modifica(textBox3.Text, textBox4.Text);
+            /*bool trova = f.Modifica(textBox3.Text, textBox4.Text);
             if(trova == true)
             {
                 MessageBox.Show("Elemento modificato");
@@ -123,6 +148,9 @@ namespace Ripasso_pre_rientro_form
             {
                 MessageBox.Show("Elemento non presente nel file");
             }
+            */
+            f.Modifica(textBox4.Text, textBox1.Text, textBox6.Text, textBox7.Text, textBox8.Text, textBox9.Text, textBox10.Text, textBox11.Text, textBox12.Text, textBox13.Text, nfile, sep, recordLenght);
+            MessageBox.Show("Record modificato");
         }
 
         private void button10_Click(object sender, EventArgs e)

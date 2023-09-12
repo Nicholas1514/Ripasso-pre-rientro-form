@@ -50,6 +50,15 @@
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.button10 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,16 +74,16 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(198, 34);
+            this.textBox1.Location = new System.Drawing.Point(1, 324);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(74, 20);
             this.textBox1.TabIndex = 1;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(321, 31);
+            this.button2.Location = new System.Drawing.Point(716, 321);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(127, 23);
+            this.button2.Size = new System.Drawing.Size(72, 39);
             this.button2.TabIndex = 2;
             this.button2.Text = "AGGIUNTA CODA";
             this.button2.UseVisualStyleBackColor = true;
@@ -129,7 +138,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(483, 31);
+            this.button7.Location = new System.Drawing.Point(25, 3);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 23);
             this.button7.TabIndex = 8;
@@ -144,7 +153,7 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dataGridView1.Location = new System.Drawing.Point(470, 76);
+            this.dataGridView1.Location = new System.Drawing.Point(470, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(318, 176);
             this.dataGridView1.TabIndex = 9;
@@ -166,7 +175,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(470, 258);
+            this.button8.Location = new System.Drawing.Point(470, 194);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(318, 48);
             this.button8.TabIndex = 10;
@@ -183,14 +192,14 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(173, 186);
+            this.textBox4.Location = new System.Drawing.Point(543, 273);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(100, 20);
             this.textBox4.TabIndex = 12;
             // 
             // button9
             // 
-            this.button9.Location = new System.Drawing.Point(304, 186);
+            this.button9.Location = new System.Drawing.Point(666, 271);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(97, 23);
             this.button9.TabIndex = 13;
@@ -210,11 +219,11 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(173, 167);
+            this.label2.Location = new System.Drawing.Point(540, 252);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(85, 13);
+            this.label2.Size = new System.Drawing.Size(170, 13);
             this.label2.TabIndex = 15;
-            this.label2.Text = "Nuovo elemento";
+            this.label2.Text = "Elemento da ricercare per modifica";
             // 
             // textBox5
             // 
@@ -242,11 +251,85 @@
             this.label3.TabIndex = 18;
             this.label3.Text = "Elemento da cancellare";
             // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(81, 324);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(75, 20);
+            this.textBox6.TabIndex = 19;
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(173, 324);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(75, 20);
+            this.textBox7.TabIndex = 20;
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(254, 324);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(87, 20);
+            this.textBox8.TabIndex = 21;
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(347, 324);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(86, 20);
+            this.textBox9.TabIndex = 22;
+            // 
+            // textBox10
+            // 
+            this.textBox10.Location = new System.Drawing.Point(450, 324);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(75, 20);
+            this.textBox10.TabIndex = 23;
+            // 
+            // textBox11
+            // 
+            this.textBox11.Location = new System.Drawing.Point(531, 324);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(79, 20);
+            this.textBox11.TabIndex = 24;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(251, 293);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(118, 13);
+            this.label4.TabIndex = 25;
+            this.label4.Text = "Da campo 1 a campo 9";
+            // 
+            // textBox12
+            // 
+            this.textBox12.Location = new System.Drawing.Point(617, 324);
+            this.textBox12.Name = "textBox12";
+            this.textBox12.Size = new System.Drawing.Size(42, 20);
+            this.textBox12.TabIndex = 26;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(666, 323);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(44, 20);
+            this.textBox13.TabIndex = 27;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.textBox13);
+            this.Controls.Add(this.textBox12);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.textBox5);
@@ -299,6 +382,15 @@
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox textBox13;
     }
 }
 
